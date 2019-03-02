@@ -390,6 +390,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="LittleMaoer.github.io/2019/03/02/vim编辑器之神/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="高盛茂">
+      <meta itemprop="description" content="学习python编程的python小白">
+      <meta itemprop="image" content="http://pndcgm4gq.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欢迎来到这里">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/02/vim编辑器之神/" class="post-title-link" itemprop="url">vim编辑器文件操作指令</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-02 09:39:16 / 修改时间：09:47:38" itemprop="dateCreated datePublished" datetime="2019-03-02T09:39:16+08:00">2019-03-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vim编辑/" itemprop="url" rel="index"><span itemprop="name">vim编辑</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vim编辑/文件操作命令/" itemprop="url" rel="index"><span itemprop="name">文件操作命令</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/02/vim编辑器之神/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count fb-comments-count" data-href="LittleMaoer.github.io/2019/03/02/vim编辑器之神/" itemprop="commentCount">0</span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"># vim编辑器之神</span><br><span class="line">### 配置vimrc配置</span><br><span class="line">在shell中可以通过 `vim ~/.vimrc` 或者 `vim /etc/vimrc` 打开vimrc文件对vim进行配置。在这个文件中可以进行很多和vim相关的配置，常用的如下（如果对其他配置感兴趣的可以自己百度）：</span><br><span class="line"></span><br><span class="line">![](./img/vim1.png) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 常用操作</span><br><span class="line">#### 1.模式切换</span><br><span class="line">我们可以将vim分为命令模式、编辑模式和末行模式三种  </span><br><span class="line">**命令模式：**进入vim的时候vim是处于命令模式状态下的，这个时候输入内容不会出现在编辑区  (最末什么都没有)</span><br><span class="line"></span><br><span class="line">**末行模式：**在命令模式下输入冒号，让vim进入末行模式。在末行模式的冒号后面可以输入相关的一些指令进行相关操作  (最后有一个冒号)</span><br><span class="line"></span><br><span class="line">**编辑模式：**在命令模式下按&apos;i&apos;进入编辑模式。在编辑模式下可以对文件内容进行编辑 (最后 --INSERT-- 或者 --插入--)  </span><br><span class="line"></span><br><span class="line">####2.保存和退出</span><br><span class="line">在末行模式下输入相应的指令可以对编辑区的内容进行保存和退出vim界面  </span><br><span class="line">**w** -- 只保存(类似快捷键ctr+s)     </span><br><span class="line">**q** -- 退出（在编辑区的内容全部都保存的情况下才有效）   </span><br><span class="line">**wq** -- 保存并退出  </span><br><span class="line">**q!**  -- 强制退出（不保存修改信息）    </span><br><span class="line"></span><br><span class="line">####3.光标操作  </span><br><span class="line">以下光标操作都是在命令模式下输入的  </span><br><span class="line">**^(shift+6)**  -- 移动到行首  </span><br><span class="line">**$(shift+4)**  -- 移动到行尾  </span><br><span class="line">**G(shift+g)**	-- 移动到文件末尾</span><br><span class="line">**行号G**			-- 移动到指定行,例如:30G, 让光标直接跳转到行号是30的那一行</span><br><span class="line">**gg**				-- 移动到文件开头  </span><br><span class="line"></span><br><span class="line">####4.文本操作  </span><br><span class="line">以下操作不带冒号的是在命令模式下输入，前面有冒号代码后面的内容是在末行模式下输入  </span><br><span class="line">**dd**			-- 删除光标所在的行    </span><br><span class="line">**数字dd**		-- 从光标所在行开始往后面开始删，删除指定数量行内容    </span><br><span class="line">**:%d**		-- 删除所有     </span><br><span class="line"></span><br><span class="line">**yy** 		-- 复制光标所在的行  </span><br><span class="line">**数字yy**		-- 从光标所在行开始复制指定行数的内容   </span><br><span class="line">**p**			-- 将复制的内容粘贴到光标所在的位置  </span><br><span class="line">**u**			-- 撤销      </span><br><span class="line">**ctr+r**    -- 反撤销    </span><br><span class="line"></span><br><span class="line">**:%!sort**  -- 对内容排序(将一行内容看出一个字符串然后按照字符串大小进行排序)  </span><br><span class="line">**：/正则表达式**  -- 搜索匹配正则表达式的内容，按回车回到命令模式后按n往前查找，按N往后查找  </span><br><span class="line">**:/查找对象[/gice]**	-- 搜索匹配正则表达式的内容，按回车回到命令模式后按n往前查找，按N往后查找  </span><br><span class="line">注意：正则表达式除了表示次数的符号前需要加\，别的和python是一样的。例如：</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">：/\d\&#123;2&#125;    -&gt; 查找两个数字</span><br><span class="line">：/a\+       -&gt; 查找a出现一次或者多次</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">**:1,$s/被替换对象/替换内容/参数**    -- 将正则表达式匹配到的内容替换成指定内容   </span><br><span class="line"></span><br><span class="line">	-	g: 全局匹配  </span><br><span class="line">	- 	i: 忽略大小写 </span><br><span class="line">	-   c: 替换时需要提示  </span><br><span class="line">	-   e: 忽略错误</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="LittleMaoer.github.io/2019/02/26/MySQL基本操作指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1979,7 +2160,7 @@ location / {
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2020,7 +2201,11 @@ location / {
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2045,7 +2230,9 @@ location / {
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
